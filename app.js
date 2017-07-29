@@ -62,13 +62,19 @@ app.set('view engine', 'ejs');
 
 app.get('/', (req, res)=>{
     res.render('index',{
-
+        
     });
 });
 
+const toDoRoutes = require('./routes/todo-routes');
+app.use('/todo', toDoRoutes);
 
 
 
+const authRoutes = require('./routes/auth-routes');
+app.use('/auth', authRoutes);
+const userRoutes = require('./routes/user-routes');
+app.use('/user', userRoutes);
 
 
 

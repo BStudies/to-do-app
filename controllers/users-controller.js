@@ -28,4 +28,13 @@ usersController.create = (req, res) => {
 }
 
 
+
+usersController.index = (req, res) =>{
+    res.json({
+        user: req.user,
+        data: `Put a user profile on this route`,
+    })
+}
+
+
 module.exports = usersController;
