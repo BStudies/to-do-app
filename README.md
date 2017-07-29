@@ -15,7 +15,23 @@ Content cell 1 | Content cell 2
 Content column 1 | Content column 2
 
 ### Auth
-Username | Password_digest | Email | Name
+Id | Username | Password_digest | Email | firstname | lastName
 ------------ | -------------
 Content cell 1 | Content cell 2
 Content column 1 | Content column 2
+
+
+
+
+
+### Views
+
+
+
+### Routes
+* User
+* Items
+
+### Model
+* User
+* Items

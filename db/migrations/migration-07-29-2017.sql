@@ -1,6 +1,6 @@
 
-DROP DATABASE to-do
-\c to-do
+DROP DATABASE to_do
+\c to_do
 
 DROP TABLE IF EXISTS users
 CREATE TABLE users(
@@ -13,3 +13,10 @@ CREATE TABLE users(
 );
 
 
+DROP TABLE IF EXISTS items
+CREATE TABLE items(
+    id BIGSERIAL PRIMARY KEY,
+    title TEXT,
+    category, TEXT,
+    description, TEXT
+);

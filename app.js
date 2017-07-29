@@ -2,9 +2,10 @@ const express = require('express');
 const logger = require('morgan');
 const path = require('path');
 const bodyParser = require('body-parser');
-require('dotenv').config();
 const methodOverride = require('method-override');
-
+const cookieParser = require('cookie-parser');
+const session = require('express-session');
+const passport = require('passport');   
 
 
 
@@ -17,6 +18,7 @@ const methodOverride = require('method-override');
 
 
 const app = express();
+require('dotenv').config();
 
 
 
@@ -35,9 +37,17 @@ app.listen(PORT, ()=>{
 
 app.use(logger('dev'));
 app.use(express.static('public'));
-// app.use(bodyPa)
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({extended: false}));
 app.use(methodOverride('_method'));
-
+app.use(cookieParser());
+app.use(session({
+    secret: process.env.SECRET_KEY,
+    resave: false,
+    saveUninitialized: true,
+}));
+app.use(passport.initialize());
+app.use(passport.session());
 
 
 
