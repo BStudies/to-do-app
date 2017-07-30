@@ -1,6 +1,6 @@
 const bcrypt = require('bcryptjs');
 const User = require('../models/user.js');
-
+const todosController = require('./todos-controller');
 
 const usersController = {};
 
@@ -30,9 +30,18 @@ usersController.create = (req, res) => {
 
 
 usersController.index = (req, res) =>{
-    res.json({
+    // console.log(req);
+    // res.locals.id=req.user.id;
+    // console.log(res.locals);
+    // res.json({
+    //     user: req.user,
+    //     // data: `Put a user profile on this route`,
+    //     data: '/user'
+    // })
+    console.log(`${req.user.username} signed in`);
+    res.render('users/user',{
+        currentPage: `${req.user.username}'s page`,
         user: req.user,
-        data: `Put a user profile on this route`,
     })
 }
 

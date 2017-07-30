@@ -62,9 +62,11 @@ app.set('view engine', 'ejs');
 
 app.get('/', (req, res)=>{
     res.render('index',{
-        
+        currentPage: 'index',
     });
 });
+
+
 
 const toDoRoutes = require('./routes/todo-routes');
 app.use('/todo', toDoRoutes);

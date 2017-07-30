@@ -1,0 +1,19 @@
+<% include ../partials/boilerplate%>
+
+
+    <h1>All todo's</h1>
+
+
+<button><a href="/todo/add">Add Todo</a></button>
+<div class='todo-container'>
+    <% for(let todo of data){%>
+        <div class='todo'>
+            <h2><%= todo.title%></h2>
+            <h3><%= todo.category%></h3>
+            <h3><%= todo.description%></h3>
+        </div>
+    <%}%>
+</div>
+
+
+<% include ../partials/end %>

@@ -25,7 +25,12 @@ Content column 1 | Content column 2
 
 
 ### Views
-
+/
+/login
+/register
+/todo
+/todo/add
+todo/delete
 
 
 ### Routes

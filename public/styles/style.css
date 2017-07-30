@@ -1,0 +1,87 @@
+body{
+    align-content: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+	align-self: auto;
+	flex-basis: auto;
+	flex-direction: column;
+	flex-flow: auto;
+	flex-grow: auto;
+	flex-shrink: auto;
+	flex-wrap: auto;
+	order: auto;  
+}
+
+.logo{
+    width: 100px;
+    height: 100px;
+    display: flex;
+    align-self: flex-start;
+}
+.hero{
+    width: 100vw;
+    height: 400px;
+    opacity: .5;
+}
+
+.register{
+    width: 100px;
+    height: 40px;
+    border-radius: 25%;
+}
+
+
+.form-container{
+    position: absolute;
+    top: 50vh;
+    left: 50vw;
+    width: 300px;
+}
+
+form{
+    width: 400px;
+}
+
+.clearfix::after{
+    content: '';
+    display: table;
+    clear: both;
+}
+
+nav{
+    /* align-content: space-around; */
+	align-items: auto;
+	align-self: flex-end;
+	display: flex;
+	flex-basis: auto;
+	flex-direction: row;
+	flex-flow: auto;
+	flex-grow: auto;
+	flex-shrink: auto;
+	flex-wrap: auto;
+	justify-content: space-around;
+    order: auto;
+    width: 400px;
+}
+
+.todo{
+    align-items: auto;
+	align-self: center;
+	display: flex;
+	flex-basis: auto;
+	flex-direction: row;
+	flex-flow: auto;
+	flex-grow: auto;
+	flex-shrink: auto;
+	flex-wrap: wrap;
+	justify-content: space-around;
+    order: auto;
+    width: 30vw;
+}
+
+
+
+button{
+    border-radius: 25%;
+}
