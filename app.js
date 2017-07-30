@@ -69,7 +69,7 @@ app.get('/', (req, res)=>{
 
 
 const toDoRoutes = require('./routes/todo-routes');
-app.use('/todo', toDoRoutes);
+app.use('/todos', toDoRoutes);
 
 
 

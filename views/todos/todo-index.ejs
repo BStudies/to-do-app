@@ -4,13 +4,19 @@
     <h1>All todo's</h1>
 
 
-<button><a href="/todo/add">Add Todo</a></button>
+<a href="/todos/add"><button>Add Todo</button></a>
 <div class='todo-container'>
     <% for(let todo of data){%>
         <div class='todo'>
-            <h2><%= todo.title%></h2>
-            <h3><%= todo.category%></h3>
-            <h3><%= todo.description%></h3>
+            <h2 class='title'><%= todo.title%></h2>
+            <h3 class='category'><%= todo.category%></h3>
+            <h3 class='status'><%= todo.status%></h3>
+            <h3 class='description'><%= todo.description%></h3>
+            <a href="/todos/<%=todo.id%>">Info</a>
+            <a href="/todos/<%=todo.id%>/edit">Edit</a>
+            <form method='POST' action='/todos/<%= todo.id %>?_method=DELETE'>
+                <input type='submit' value='Delete' />
+            </form>
         </div>
     <%}%>
 </div>
