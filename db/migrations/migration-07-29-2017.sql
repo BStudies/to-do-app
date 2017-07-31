@@ -1,7 +1,7 @@
 
 -- DROP DATABASE delorean_to_do
 -- CREATE DATABASE delorean_to_do;
-\c delorean_to_do
+-- \c delorean_to_do
 
 DROP TABLE IF EXISTS users;
 CREATE TABLE users(
