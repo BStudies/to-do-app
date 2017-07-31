@@ -70,17 +70,57 @@ nav{
 	align-self: center;
 	display: flex;
 	flex-basis: auto;
+	flex-direction: column;
+	flex-flow: auto;
+	flex-grow: auto;
+	flex-shrink: auto;
+	flex-wrap: auto;
+	justify-content: auto;
+    order: auto;
+    /* width: 300px; */
+}
+top{
+    align-items: auto;
+	align-self: center;
+	display: flex;
+	flex-basis: auto;
 	flex-direction: row;
 	flex-flow: auto;
 	flex-grow: auto;
 	flex-shrink: auto;
-	flex-wrap: wrap;
-	justify-content: space-around;
+	flex-wrap: auto;
+	justify-content: auto;
     order: auto;
-    width: 30vw;
 }
-
-
+bottom{
+    align-items: auto;
+	align-self: center;
+	display: flex;
+	flex-basis: auto;
+	flex-direction: row;
+	flex-flow: auto;
+	flex-grow: auto;
+	flex-shrink: auto;
+	flex-wrap: auto;
+	justify-content: auto;
+    order: auto;
+}
+bottomleft{
+    
+}
+bottomright{
+    align-items: auto;
+	align-self: center;
+	display: flex;
+	flex-basis: auto;
+	flex-direction: row;
+	flex-flow: auto;
+	flex-grow: auto;
+	flex-shrink: auto;
+	flex-wrap: auto;
+	justify-content: auto;
+    order: auto;
+}
 
 button{
     border-radius: 25%;

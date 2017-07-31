@@ -8,15 +8,23 @@
 <div class='todo-container'>
     <% for(let todo of data){%>
         <div class='todo'>
-            <h2 class='title'><%= todo.title%></h2>
-            <h3 class='category'><%= todo.category%></h3>
-            <h3 class='status'><%= todo.status%></h3>
-            <h3 class='description'><%= todo.description%></h3>
-            <a href="/todos/<%=todo.id%>">Info</a>
-            <a href="/todos/<%=todo.id%>/edit">Edit</a>
-            <form method='POST' action='/todos/<%= todo.id %>?_method=DELETE'>
-                <input type='submit' value='Delete' />
-            </form>
+            <div class='top'>
+                <h2 class='title'><%= todo.title%></h2>
+                <h3 class='status'><%= todo.status%></h3>
+            </div>
+            <div class='bottom'>
+                <div class='bottomleft'>
+                    <h3 class='category'><%= todo.category%></h3>
+                </div>
+                <div class='bottomright'>
+                    <a href="/todos/<%=todo.id%>">Info</a>
+                    <a href="/todos/<%=todo.id%>/edit">Edit</a>
+                    <form method='POST' action='/todos/<%= todo.id %>?_method=DELETE'>
+                        <input type='submit' value='Delete' />
+                    </form>
+                </div>
+            </div>
+
         </div>
     <%}%>
 </div>

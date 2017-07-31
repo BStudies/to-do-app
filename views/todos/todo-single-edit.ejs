@@ -2,9 +2,9 @@
 
 <form method='POST' action='/todos/<%= data.id %>?_method=PUT'>
     <input name='user_id' type='number' style='display: none' value='<%=user_id%>' />
-    <input name='title' type='text' placeholder='title' />
-    <input name='category' type='text' placeholder='category'>
-    <input name='description' type='text' placeholder='description'>
+    <input name='title' type='text' placeholder='title: <%=data.title%>' />
+    <input name='category' type='text' placeholder='category: <%=data.category%>'>
+    <input name='description' type='text' placeholder='description: <%=data.description%>'>
     <input type='submit' value='Edit it!' />
 </form>
  
