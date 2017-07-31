@@ -21,7 +21,7 @@ const db = (() => {
       user: 'postgres',
       password: ''
     });
-  } 
+  }
   else if (process.env.NODE_ENV === 'production') {
     return pgp(process.env.DATABASE_URL);
   }
